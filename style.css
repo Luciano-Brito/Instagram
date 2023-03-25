@@ -1,0 +1,124 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+}
+.topo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    height: 54px;
+    width: 100%;
+    z-index: 1;
+}
+.topo .borda{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.topo img{
+    position: absolute;
+    top: 18px;
+    width: 103px;
+    height: 29px;
+}
+.topo ion-icon:nth-child(odd){
+    position: absolute;
+    font-size: 22px;
+    top: 18px
+}
+.topo ion-icon:nth-child(1){
+    left: 22px;
+}
+.topo ion-icon:nth-child(3){
+    right: 22px;
+}
+main{
+    margin-top: 54px;
+}
+.borda{
+    height: 1px;
+    width: 100%;
+    background-color: #dbdbdb;
+}
+.stories{
+    height: 121px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.story{
+    background-image: url("source/stories_background.png");
+    background-size: 66px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-top: 5px;
+    width: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.story p{
+    text-align: center;
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #262626
+}
+.post{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #DBDBDB;
+    border-top: 1px solid #DBDBDB;
+    margin-bottom: 65px;
+}
+.cabecalho-post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+.perfil{
+    padding-left: 17px;
+
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.perfil img{
+    width: 32px;
+    height: 32px;
+}
+.perfil p{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+.cabecalho-post ion-icon{
+    font-size: 22px;
+    padding-right: 15px;
+}
+.rodape-post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    width: 100%;
+    font-size: 22px;
+}
+.icones-esquerda{
+    padding-left: 18px;
+}
+.icones-direita{
+    padding-right: 18px;
+}
