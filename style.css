@@ -8,6 +8,11 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #fafafa;
     font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+.sidebar{
+    display: none;
 }
 .topo-mobile{
     position: fixed;
@@ -37,10 +42,20 @@ body{
     right: 20px;
 }
 main{
+    width: 100%;
     margin-top: 54px;
+    display: flex;
+    justify-content: center;
+}
+.conteudo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .stories{
     height: 121px;
+    width: 100%;
     display: flex;
     justify-content: space-evenly; 
     align-items: center;
@@ -75,6 +90,7 @@ main{
     border-bottom: 1px solid #DBDBDB;
     border-top: 1px solid #DBDBDB;
     margin-bottom: 65px;
+    width: 100%;
 }
 .cabecalho-post{
     display: flex;
@@ -144,18 +160,24 @@ main{
     .topo-mobile{
         display: none;
     }
+    .container-topo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
     .topo-desktop{
         position: fixed;
         top: 0px;
         left: 0px;
         background-color: #fff;
         border-bottom: 1px solid #DBDBDB;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 55px;
         width: 100%;
         z-index: 1;
+        display: flex;
+        justify-content: center;
     }
     .topo-esquerda{
         position: absolute;
@@ -222,5 +244,124 @@ main{
         border: 1px solid #DBDBDB;
         border-radius: 3px;
         margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 935px){
+    .container-topo{
+        width: 935px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .topo-esquerda{
+        left: 0px;
+    }
+    .topo-direita{
+        right: 0px;
+    }
+    main{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        width: 935px;
+    }
+    .conteudo{
+        width: fit-content;
+    }
+    .stories{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .sidebar{
+        position: fixed;
+        margin-left: 642px;
+        display: flex;
+        flex-direction: column;
+        width: 293px;
+        height: 100%;
+    }
+    .topo-sidebar{
+        margin-top: 23px;
+        display: flex;
+    }
+    .topo-sidebar img{
+        width: 56px;
+        height: 56px;
+    }
+    .topo-sidebar p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 17px;
+    }
+    .sidebar p span:nth-child(1){
+        color: #262626;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .topo-sidebar p span:nth-child(2){
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: #8E8E8E;
+    }
+    .sidebar p span:nth-child(2){
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #8E8E8E;
+    }
+    .sugestoes{
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sugestoes p:nth-child(1){
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #8E8E8E;
+    }
+    .sugestoes p:nth-child(2){
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: right;
+        color: #262626;
+    }
+    .sugestao{
+        display: flex;
+        margin-top: 17px;
+        position: relative;
+    }
+    .sugestao p:nth-child(2){
+        display: flex;
+        margin-left: 11px;
+        flex-direction: column;
+    }
+    .sugestao p:nth-child(3){
+        position: absolute;
+        right: 0px;
+        align-self: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #139EF2;
+    }
+    .rodape-sidebar p:nth-child(1){
+        margin-top: 33px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #C7C7C7;
+    }
+    .rodape-sidebar p:nth-child(2){
+        margin-top: 18px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #C7C7C7;
     }
 }
